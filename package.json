@@ -1,0 +1,33 @@
+{
+  "name": "game-mods-arabic",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "setup": "node scripts/setup.mjs",
+    "migrate:turso": "node scripts/migrate-to-turso.mjs",
+    "typecheck": "tsc --noEmit",
+    "test:security": "node --experimental-strip-types --test scripts/security.test.mjs",
+    "test:review": "node --conditions=react-server --experimental-strip-types --test scripts/mod-review.test.mjs",
+    "test:mirror": "node --conditions=react-server --experimental-strip-types --test scripts/mirror-storage.test.mjs",
+    "test:download": "node --experimental-strip-types --test scripts/download-sources.test.mjs"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.18.0",
+    "next": "^15.4.6",
+    "next-auth": "^4.24.15",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.16.5",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "typescript": "^5.9.2"
+  },
+  "overrides": {
+    "postcss": "^8.5.23"
+  }
+}
